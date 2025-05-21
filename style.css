@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(
+        to top,
+        rgba(0,0,0,0.8)0%,
+        rgba(0,0,0,0)60%,
+        rgba(0,0,0,0.8)100%
+    ),url(https://assets.nflxext.com/ffe/siteui/vlv3/fa4630b1-ca1e-4788-94a9-eccef9f7af86/web/IN-en-20250407-TRIFECTA-perspective_43f6a235-9f3d-47ef-87e0-46185ab6a7e0_large.jpg);
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+.logo{
+    width: 140px;
+    display: inline-block;
+}
+.logo img{
+    width: 100%;
+}
+.btn-nfxbtn-primary{
+    background-color: red;
+    border-color: red;
+}
+.backDrop{
+    background-color: rgba(0,0,0,0.6);
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100vh;
+    cursor: pointer;
+    display: none;
+}
+.backDrop.active{
+    display: block;
+}
+.movieModel{
+    position: fixed;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 4px;
+    height: 300px;
+    top:10%;
+    width: 60%;
+    left:20%;
+    display:none;
+}
+.movieModel.active{
+    display: block;
+}
+.movieModel .card{
+    background-color: transparent;
+    color: white;
+}
+.movieModel .card .form-control{
+    background-color:transparent;
+    border-color:rgba(128,128,128,0.7);
+}
+.movieModel .card select option{
+    background-color: #333;
+}
+.modalClose{
+    cursor: pointer;
+}
+.movieCard{
+    height: 400px;
+    color:white;
+    position: relative;
+}
+.movieCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.movieCard .info{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.ratingTitle{
+    position:absolute;
+    left:0;
+    bottom: 0;
+    right:0;
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px;
+}
+.movieInfo{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    overflow-y: auto;
+    transform: translateY(-100%);
+    transition:transform 0.3s ease-in-out;
+    z-index:2;
+}
+.action{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    padding: 10px;
+    background-color: #000;
+    display: none;
+    z-index: 3;
+    display:flex;
+    justify-content: space-between;
+}
+.movieCard:hover .movieInfo{
+    transform: translateY(0%);
+}
+.movieCard:hover .action{
+    display: block;
+    animation: fadeIn .3s ease-in-out;
+}
+@keyframes  fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

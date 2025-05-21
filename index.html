@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieModal using FireBase</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="index.html" class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="logo" title="logo"></a>
+            </div>
+            <div class="col-md-6 text-right">
+                <button type="button" class="btn btn-sm btn-danger btn-nfxbtn-primary" id="showbtn">ADD MOVIE</button>
+            </div>
+        </div>
+    </div>
+    <div class="backDrop modalClose" id="backDrop"></div>
+
+    <div class="container-fluid mt-5">
+        <div class="row" id="postContainer">
+            
+    </div>
+    </div>
+
+    <div class="movieModel" id="movieModel">
+        <form id="postForm">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between">
+<h3 class="mb-0">ADD MOVIE DETAILS</h3>
+<i class="fa-solid fa-xmark fa-2x modalClose"></i>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="movieTitle">MovieTitle</label>
+                        <input required type="text" class="form-control" id="movieTitle">
+                    </div>
+
+                     <div class="form-group">
+                        <label for="movieUrl">MovieUrl</label>
+                        <input required type="text" class="form-control" id="movieUrl">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movieDescription">MovieDescription</label>
+                        <textarea required type="text" class="form-control" rows="5" id="movieDescription"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movieRatings">MovieRatings</label>
+                        <select required class="form-control" id="movieRatings">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+<button type="submit" class="btn btn-sm btn-danger btn-nfxbtn-primary" id="addbtn">Add movie</button>
+<button type="button" class="btn btn-sm btn-danger btn-nfxbtn-primary modalClose">Close</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/82b478bfd0.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/app.js"></script>  
+</body>
+</html>
